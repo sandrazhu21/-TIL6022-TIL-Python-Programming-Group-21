@@ -32,7 +32,7 @@ The repository contains the input data, analysis notebook(s), and project figure
 ```text
 repository-root/
 ├── README.md
-├── Final_code(1).ipynb
+├── Final_code.ipynb
 └── report_outputs/                   # generated when the notebook runs
     ├── consumption_sensitivity_soc.png
     ├── destination_dwell_sensitivity_soc.png
