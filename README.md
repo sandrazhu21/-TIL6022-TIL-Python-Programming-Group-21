@@ -4,6 +4,18 @@ Members: Andrea De Felice, Magdalini Karataraki, Stella Nestori, Fernando Quiros
 
 Student numbers: 6591973, 6794629, 6811523, 5237076, 6615201
 
+# Introduction
+
+**Context & Relevance**
+
+The transition towards more sustainable transport systems is an important part of addressing climate change and reducing greenhouse gas emissions. In the European Union, heavy-duty vehicles, including trucks, buses and coaches, are responsible for more than 25% of road transport greenhouse gas emissions, despite representing only about 2% of vehicles on EU roads (European Commission, 2026). Furthermore, transport activity is expected to increase, therefore reducing the environmental impact of transport has become an important challenge for the transport sector (European Environment Agency, 2026).  
+
+One potential approach to reducing these emissions is the electrification of heavy-duty vehicles. Replacing conventional diesel trucks with electric alternatives can contribute to the decarbonization of freight transport. However, the transition involves more than simply replacing one type of vehicle with another. The integration of electric trucks into existing transport oeprations also requires suitable charging infrastructure to ensure that vehicles have sufficient energy to perform their scheduled duties. The availability, location, and charging capacity of infrastructure therefore play an important role in determining whether electric trucks can be practically intergated into daily logistics operations.  
+
+In particular, charging opportunities need to align with the operational schedules of freight transport. Trucks may be able to recharge between working days, but this may not always provide sufficient energy for more demanding daily oeprations. Charging during scheduled stops, such as loading and unloding periods, could offer an additional opportunity to replenish the battery. Consequently, understanding the relationship between transport schedules and charging opportunities is important when assessing the feasibility of electric trucks in existing logistics networks.  
+
+These challenges are particularly relevant in port environments, where freight transport connects maritime activities with inland networks. In ports, there are substantial truck movements between terminals, distribution centers and other destinations, which makes electrification of trucks operating in and around ports an important consideration. In this context, the Port of Rotterdam (PoR) can serve as a relevant case for examining the potential and challenges of freight electrification.  As a major logistics hub, it accommodates different types of hinterland truck operations that vary in distance, frequency, and daily schedules. According to Smart Freight Centre (2024), approximately 55% of the port's hinterland container transport is carried by trucks, resulting in around 10,000 truck movements to and from the port each day. These movements involve a variety of transport distances, with some trucks performing multiple relatively short trips and others undertaking longer journeys. The report also indicates that approximately 74% of truck trips to and from the port fall within a distance of 250km. This illustrates the diversity of truck operations in the port area and suggests that different operational profiles may have different energy requirements and charging needs.  
+
 # Research Objective
 
 The objective of this project is to determine which representative truck duties serving the Port of Rotterdam can be completed with depot charging alone and which require additional opportunity charging during scheduled dwell periods. A common set of vehicle specifications is applied to the three representative operational profiles, short, medium, and long-distance to examine how differences in travel distance, number of round trips, and charging opportunities affect feasibility. 
@@ -26,21 +38,13 @@ Which combinations of operating profile and charging configuration allow the tru
 
 For the configurations that allow completion of the daily duty, is the remaining time before the next departure sufficient to restore the battery to its initial state of charge using depot charging? 
 
-How sensitive is duty feasibility to changes in energy consumption, destination dwell time, and intermediate port-terminal dwell time? 
+How sensitive is duty feasibility to changes in energy consumption, destination dwell time, and intermediate port-terminal dwell time?
 
-# Contribution Statement
+**Geographical and temporal scale**
 
-*Be specific. Some of the tasks can be coding (expect everyone to do this), background research, conceptualisation, visualisation, data analysis, data modelling*
+This project focuses on road freight logistics operations connecting the PoR. These operations are represented by short-, medium-, and long-distance duties, with different trip distances and numbers of round trips per day. The PoR is assumed to be the origin and final return point for all duties, with destinations represented by their distance from the port rather than specific geographical locations. The depot is also assumed to be located at the port. 
 
-**Author 1**:
-
-**Author 2**:
-
-**Author 3**:
-
-**Author 4**:
-
-**Author 5**:
+The model considers a 24-hour cycle, starting at 09:00 with the battery at 90% state of charge. This cycle includes the daily transport duty, consisting of driving and loading or unloading periods, followed by the time available for depot charging. The next departure is scheduled for 09:00 the following day. The analysis therefore checks both whether the truck can complete its duty and whether it can restore its initial battery level before the next departure. 
 
 # Data Used
 
@@ -89,6 +93,9 @@ Starting with the data collection phase, a preliminary assessment of electric tr
 5. Evaluation: assessing feasibility and computing performance metrics 
 
 6. Visualisation: SOC trajectories, feasibility outputs, sensitivity plots 
+
+# Methodology
+
 
 # Results
 
@@ -181,3 +188,16 @@ Second, the model assumes constant energy consumption, charging power, and charg
 
 Furthermore, the sensitivity analysis is limited to test truck specifications and representative operating conditions; therefore, it evaluates individual truck duties rather than simultaneous charging requirements of multiple vehicles as determining for example, the number of chargers required to serve the overall freight network. 
 
+# Contribution Statement
+
+*Be specific. Some of the tasks can be coding (expect everyone to do this), background research, conceptualisation, visualisation, data analysis, data modelling*
+
+**Author 1**:
+
+**Author 2**:
+
+**Author 3**:
+
+**Author 4**:
+
+**Author 5**:
