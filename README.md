@@ -107,39 +107,25 @@ The short-distance duty requires less energy than 432 kWh of usable battery ener
 
 *Feasible configurations*
 
-![Matrix](report_outputs/Figure 01.png)
-
+![Figure 01](report_outputs/Figure%2001.png)
 Figure 01. En-route feasibility by operational profile and charging modality 
 
- 
-
- 
-
+![Figure 02](report_outputs/Figure%2002.png)
 Figure 02. Repeatable daily feasibility with overnight depot charging 
-
- 
 
 Figure 01 and Figure 02 present the en-route and repeatable feasibility across the three operational profiles and charging configurations. The short-distance duty is feasible under all configurations, whereas the medium-distance duty requires at least 180 kW opportunity charging, and the long-distance duty requires 360 kW opportunity charging. Both matrices show identical feasibility results, indicating that all configurations capable of completing the daily duty can also recover their initial SOC through overnight depot charging before the next duty. Therefore, overnight recharging does not introduce an additional feasibility constraint under baseline conditions. 
 
- 
-
- 
-
+![Figure 03](report_outputs/Figure%2003.png)
 Figure 03. Minimum recorded SOC by profile and charging configuration 
 
 Figure 03 compares the minimum recorded SOC for each operational profile and charging configuration, using the feasibility threshold. The short distance duty maintains a minimum SOC of 33.3% with depot-only charging, increasing to approximately 80% with opportunity charging. For the medium-distance duty, the minimum SOC increases to 41.0% with 180 kW charging, and to 60.9% with 360 kW charging. In contrast, the long-distance duty remains below the minimum threshold under depot-only and 180 kW charging, while 360 kW charging maintains a minimum SOC of roughly 16.9% providing a limited margin above the threshold, just 6.9 percentage points above the threshold. 
 
- 
-
- 
-
+![Figure 04](report_outputs/Figure%2004.png)
 Figure 04. SOC trajectories by daily operations 
 
 Figure 04 presents the SOC trajectories throughout the daily operations. Short distance duties remain above the minimum threshold even without opportunity charging. For medium-distance duties, depot-only charging becomes insufficient during the second-round trip, while intermediate charging maintains operational feasibility. Long-distance duties depend on the single destination charging opportunity, where only the 360 kW configuration provides sufficient energy to complete the return trip. 
 
 *Sensitivity analysis*
-
- 
 
 The sensitivity analysis evaluates how changes in energy consumption, destination dwell time, and port terminal dwell time affect the minimum SOC threshold and operational feasibility. A total of 180 simulations were performed, varying one parameter at a time across three operational profiles and three charging configurations. These include 72 simulations for energy consumption and 54 simulations for each dwell time parameter (destination and port-terminal), while the remaining parameters were maintained at their baseline values. 
 
@@ -151,16 +137,19 @@ The tested values were selected within predefined minimum and maximum around the
 | Destination dwell time | 0.25, 0.50, 0.75, 1.00, 1.25 and 1.50 hours |
 | Port terminal dwell time  | 0.25, 0.50, 0.75, 1.00, 1.25 and 1.50 hours |
 
+![Figure 05](report_outputs/Figure%2005.png)
 Figure 05. Sensitivity of minimum battery SOC to energy consumption 
 
 Figure 05 shows the relationship between energy consumption (kWh/km) and minimum SOC (%) for each operational profile. Higher energy consumption generally reduces the minimum SOC, particularly for medium and long-distance duties. The short-distance duty remains feasible with opportunity charging throughout the tested range, while depot-only charging becomes infeasible at approximately 2.6 kWh/km. For the medium-distance duty, the 180 kW configurations fall below the minimum threshold at approximately 2.2 kWh/km, whereas 360 kW charging maintains feasibility up to approximately 3.1 kWh/km. The long-distance duty is more sensitive, with 360 kW charging falling below the threshold at approximately 2.21 kWh/km. 
 
 Additionally, for the medium-distance profile, some fluctuations in minimum SOC occur because the simulation stops when the SOC falls below the threshold. Higher energy consumption may therefore cause earlier termination and a higher recorded minimum SOC, rather than an actual improvement in battery performance. 
 
+![Figure 06](report_outputs/Figure%2006.png)
 Figure 06. Sensitivity of minimum battery SOC to destination dwell time. 
 
 Figure 06 illustrates how minimum SOC changes as destination dwell time increases from 0.25 to 1.5 hours. For short-distance duties, the minimum SOC remains above 30% with depot only charging and approximately 80% with opportunity charging. For medium-distance duties, 360 kW charging reaches approximately 61% minimum SOC with 0.5-hour dwell, while 180 kW charging increases from approximately 11% to 54.3% as dwell time increases. For long-distance duties, 360 kW charging becomes feasible with approximately 0.75 hour of destination dwell, whereas 180 kW charging requires approximately 1.5 hours. 
 
+![Figure 07](report_outputs/Figure%2007.png)
 Figure 07. Sensitivity of minimum battery SOC to port terminal dwell time. 
 
 Figure 07 shows the impact of increasing port terminal dwell time from 0.25 to 1.5 hours. Short distance duties remain feasible under all charging configurations, with no significant improvement from longer dwell periods. For medium-distance duties, the minimum SOC with 180 kW charging increases from approximately 26% to 54.3%, while 360 kW charging reaches approximately 60.9% with a 0.50-hour dwell. In contrast, the long-distance duty shows no changes in minimum SOC because its operational schedule includes only one round a trip without intermediate port terminal charging opportunities. 
