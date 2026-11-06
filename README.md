@@ -45,7 +45,6 @@ repository-root/
     ├── port_terminal_extreme_scenario_hourly_visit.png
     ├── repeatability_matrix.png
     ├── speed_intensity_profile.png
-    ├── traffic_sensitivity_comparison.png
     ├── trajectories.png
     ├── port_terminal_extreme_scenario_hourly_visit.png.png
     ├── port_terminal_extreme_scenario_hourly_term_grid_electricity.png
