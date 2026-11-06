@@ -26,9 +26,7 @@ For the configurations that allow completion of the daily duty, is the remaining
 
 How sensitive is duty feasibility to changes in energy consumption, destination dwell time, and intermediate port-terminal dwell time?
 
-# Methodology
-
-**Data Analysis Pipeline**
+# Data Pipeline
 
 To determine which truck duties can be completed with overnight depot charging alone and which require opportunity charging, we developed a deterministic, event-based simulation of one working day for representative short, medium, and long-haul electric trucks serving the Port of Rotterdam (PoR). The model tracks the truck's battery through a chronological sequence of driving and dwell events, checking after each event whether the minimum State of Charge (SOC) requirement is respected. It subsequently tests whether the vehicle can recover its energy overnight at the depot before the next duty. By evaluating the three operational profiles in correlation with three alternative charging configurations, the framework establishes nine baseline scenarios to compare different route requirements and charging strategies. 
 
