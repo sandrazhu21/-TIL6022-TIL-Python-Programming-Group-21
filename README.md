@@ -89,3 +89,95 @@ Starting with the data collection phase, a preliminary assessment of electric tr
 5. Evaluation: assessing feasibility and computing performance metrics 
 
 6. Visualisation: SOC trajectories, feasibility outputs, sensitivity plots 
+
+# Results
+
+*Energy requirements*
+
+The simulation of energy requirements of representative short, medium, and long-distance truck services in the PoR, shows significant differences in daily energy requirements. With the operational parameters given, the short distance profile (180 km) requires 306 kWh, in contrast, the medium distance (370 km) requires 629 kWh, while the long-distance duty (375 km) requires 637.5 kWh. 
+
+The short-distance duty requires less energy than 432 kWh of usable battery energy within the operating SOC range of 10% to 90%, making depot only charging feasible. In contrast, medium, and long-distance duties require 629 kWh and 637.5 kWh, respectively, exceeding the nominal battery capacity (540 kWh) and requiring opportunity charging during daily operations. 
+
+*Feasible configurations*
+
+ 
+
+
+Figure 01. En-route feasibility by operational profile and charging modality 
+
+ 
+
+ 
+
+Figure 02. Repeatable daily feasibility with overnight depot charging 
+
+ 
+
+Figure 01 and Figure 02 present the en-route and repeatable feasibility across the three operational profiles and charging configurations. The short-distance duty is feasible under all configurations, whereas the medium-distance duty requires at least 180 kW opportunity charging, and the long-distance duty requires 360 kW opportunity charging. Both matrices show identical feasibility results, indicating that all configurations capable of completing the daily duty can also recover their initial SOC through overnight depot charging before the next duty. Therefore, overnight recharging does not introduce an additional feasibility constraint under baseline conditions. 
+
+ 
+
+ 
+
+Figure 03. Minimum recorded SOC by profile and charging configuration 
+
+Figure 03 compares the minimum recorded SOC for each operational profile and charging configuration, using the feasibility threshold. The short distance duty maintains a minimum SOC of 33.3% with depot-only charging, increasing to approximately 80% with opportunity charging. For the medium-distance duty, the minimum SOC increases to 41.0% with 180 kW charging, and to 60.9% with 360 kW charging. In contrast, the long-distance duty remains below the minimum threshold under depot-only and 180 kW charging, while 360 kW charging maintains a minimum SOC of roughly 16.9% providing a limited margin above the threshold, just 6.9 percentage points above the threshold. 
+
+ 
+
+ 
+
+Figure 04. SOC trajectories by daily operations 
+
+Figure 04 presents the SOC trajectories throughout the daily operations. Short distance duties remain above the minimum threshold even without opportunity charging. For medium-distance duties, depot-only charging becomes insufficient during the second-round trip, while intermediate charging maintains operational feasibility. Long-distance duties depend on the single destination charging opportunity, where only the 360 kW configuration provides sufficient energy to complete the return trip. 
+
+*Sensitivity analysis*
+
+ 
+
+The sensitivity analysis evaluates how changes in energy consumption, destination dwell time, and port terminal dwell time affect the minimum SOC threshold and operational feasibility. A total of 180 simulations were performed, varying one parameter at a time across three operational profiles and three charging configurations. These include 72 simulations for energy consumption and 54 simulations for each dwell time parameter (destination and port-terminal), while the remaining parameters were maintained at their baseline values. 
+
+The tested values were selected within predefined minimum and maximum around the baseline assumptions, using equally spaced intervals to assess changes in operational feasibility. 
+
+| Parameter | Values tested |
+|---|---:|
+| Energy Consumption | 0.500, 0.929, 1.357, 1.786, 2.214, 2.643, 3.071, 3.500 kWh/km |
+| Destination dwell time | 0.25, 0.50, 0.75, 1.00, 1.25 and 1.50 hours |
+| Port terminal dwell time  | 0.25, 0.50, 0.75, 1.00, 1.25 and 1.50 hours |
+
+Figure 05. Sensitivity of minimum battery SOC to energy consumption 
+
+Figure 05 shows the relationship between energy consumption (kWh/km) and minimum SOC (%) for each operational profile. Higher energy consumption generally reduces the minimum SOC, particularly for medium and long-distance duties. The short-distance duty remains feasible with opportunity charging throughout the tested range, while depot-only charging becomes infeasible at approximately 2.6 kWh/km. For the medium-distance duty, the 180 kW configurations fall below the minimum threshold at approximately 2.2 kWh/km, whereas 360 kW charging maintains feasibility up to approximately 3.1 kWh/km. The long-distance duty is more sensitive, with 360 kW charging falling below the threshold at approximately 2.21 kWh/km. 
+
+Additionally, for the medium-distance profile, some fluctuations in minimum SOC occur because the simulation stops when the SOC falls below the threshold. Higher energy consumption may therefore cause earlier termination and a higher recorded minimum SOC, rather than an actual improvement in battery performance. 
+
+Figure 06. Sensitivity of minimum battery SOC to destination dwell time. 
+
+Figure 06 illustrates how minimum SOC changes as destination dwell time increases from 0.25 to 1.5 hours. For short-distance duties, the minimum SOC remains above 30% with depot only charging and approximately 80% with opportunity charging. For medium-distance duties, 360 kW charging reaches approximately 61% minimum SOC with 0.5-hour dwell, while 180 kW charging increases from approximately 11% to 54.3% as dwell time increases. For long-distance duties, 360 kW charging becomes feasible with approximately 0.75 hour of destination dwell, whereas 180 kW charging requires approximately 1.5 hours. 
+
+Figure 07. Sensitivity of minimum battery SOC to port terminal dwell time. 
+
+Figure 07 shows the impact of increasing port terminal dwell time from 0.25 to 1.5 hours. Short distance duties remain feasible under all charging configurations, with no significant improvement from longer dwell periods. For medium-distance duties, the minimum SOC with 180 kW charging increases from approximately 26% to 54.3%, while 360 kW charging reaches approximately 60.9% with a 0.50-hour dwell. In contrast, the long-distance duty shows no changes in minimum SOC because its operational schedule includes only one round a trip without intermediate port terminal charging opportunities. 
+
+# Conclusion
+
+The simulation results indicate that the energy requirements of representative truck duties differ significantly across operational profiles. Short-distance duties can be supported by the available battery energy, whereas medium and long-distance duties exceed the usable battery capacity, making additional charging necessary under the baseline assumptions. 
+
+Regarding duty feasibility, overnight depot charging is sufficient for short-distance profile, while medium-distance profile is feasible with 180 kW opportunity charging and long-distance profile is feasible only with 360 kW. These findings suggest that the charging requirements are influenced not only by energy demand, but also by the availability of charging opportunities throughout the daily operation. 
+
+Regarding repeatable daily feasibility, all configurations capable of completing their duties can also restore the initial % SOC before the next departure. Therefore, overnight depot charging did not introduce an additional constraint in the baseline simulations. 
+
+The sensitivity analysis indicates that operational feasibility is dependent on the parameters used (energy consumption and the availability of charging opportunities). Longer dwell periods can improve feasibility, but their effectiveness depends on the operational schedule and charging power. Therefore, the feasibility of electric truck operations cannot be assessed from distance alone within the simulated profiles, since trucks with similar daily energy requirements may need different charging configurations depending on the frequency and duration of available charging opportunities. 
+
+Overall, the study provides a preliminary assessment of charging feasibility for three representative freight operations serving the PoR, based on selected technical and operational assumptions. Within the simulated conditions, depot-only charging is sufficient for the short-distance duty, whereas medium and long-distance profiles require additional opportunity to charge at different power levels. The sensitivity analysis provides relevant information on how changes in energy consumption and dwell times affect operational feasibility within the scope of the model. 
+
+# Discussion
+
+The findings provide a basis for extending the current simulation towards a broader assessment of charging infrastructure in the PoR. Future developments could incorporate simultaneous truck movements, charging demand across different terminals, charger availability, and operational constraints. By integrating these factors, the model could move beyond individual duty feasibility to estimate the number and distribution of charging points required to support electric freight operations at the port network level. 
+
+Several limitations should be considered when interpreting these findings. First, the simulation used three representative operational profiles with fixed distances, travel speeds, and schedules. Although these profiles provide a basis for comparison, they do not capture the full diversity of truck operations serving the PoR, including variations in traffic conditions, vehicle loads, and daily travel patterns. 
+
+Second, the model assumes constant energy consumption, charging power, and charging efficiency. It also excludes real conditions as unavailable chargers during scheduled dwell times, queues, or waiting times. In practice, variations in energy consumption, charging performance, and infrastructure availability could reduce energy recovered and affect operational feasibility.  
+
+Furthermore, the sensitivity analysis is limited to test truck specifications and representative operating conditions; therefore, it evaluates individual truck duties rather than simultaneous charging requirements of multiple vehicles as determining for example, the number of chargers required to serve the overall freight network. 
+
