@@ -48,9 +48,29 @@ repository-root/
     ├── traffic_sensitivity_comparison.png
     ├── trajectories.png
 ```
-# 3. Data Sources
+# 3. Data Sources and Scenario Assumptions
 
-The analysis uses representative truck operational profiles and parameters related to vehicle energy use and charging.
+**Data Sources**
+The supplied notebook does not import input data files or query an external API. Its input data are scenario parameters defined directly in Python.
+
+**Baseline Parameters**
+| Parameter | Base value | Basis |
+|---|---:|---|
+| Nominal battery capacity | 540 kWh | Smart Freight Centre (2024) |
+| Energy Consumption | 1.7 kWh/km | Smart Freight Centre (2024)  |
+| Average driving speed | 60 km/h | Smart Freight Centre (2024) |
+| Destination dwell time | 0.75 hours (45 minutes) | Smart Freight Centre (2024) |
+| Intermediate dwell time | 0.75 hours (45 minutes) | Model assumption |
+| Duty start | 09:00 | Smart Freight Centre (2024) and model assumption |
+| One-way distance: Short / Medium / Long | 30 / 92.5 / 187.5 km | Midpoints of Smart Freight Centre (2024) distance bands |
+| Round trips: Short / Medium / Long | 3 / 2 / 1 | Smart Freight Centre (2024) |
+| Minimum / maximum / initial SOC | 10% / 90% / 90% | Model assumption |
+| Charging efficiency | 90% | Model assumption |
+| Depot charging power | 150 kW | Model assumption informed by Smart Freight Centre (2024) |
+| Opportunity charging power | 0 / 180 / 360 kW | Tested alternatives; PoR/SFC references |
+| Opportunity charger availability | All eligible dwell events | Model assumption |
+| Final return | Duty ends; no additional terminal dwell | Model assumption |
+| Next departure | 24 hours after duty start | Model assumption |
 
 # 4. Reproduction Guide
 
@@ -79,26 +99,6 @@ python -m pip install numpy pandas matplotlib seaborn ipython jupyter ipykernel
 4. Open **`Final_code.ipynb`** (the filename of the supplied final notebook).
 5. Select a Python kernel with the required packages installed.
 6. Run **all cells from top to bottom**. Classes, scenario objects, simulation functions, result tables, and plotting code are defined in preceding cells and must be executed in order.
-
-**Key parameters**
-
-| Parameter | Base value | Basis |
-|---|---:|---|
-| Nominal battery capacity | 540 kWh | Smart Freight Centre (2024) |
-| Energy Consumption | 1.7 kWh/km | Smart Freight Centre (2024)  |
-| Average driving speed | 60 km/h | Smart Freight Centre (2024) |
-| Destination dwell time | 0.75 hours (45 minutes) | Smart Freight Centre (2024) |
-| Intermediate dwell time | 0.75 hours (45 minutes) | Model assumption |
-| Duty start | 09:00 | Smart Freight Centre (2024) and model assumption |
-| One-way distance: Short / Medium / Long | 30 / 92.5 / 187.5 km | Midpoints of Smart Freight Centre (2024) distance bands |
-| Round trips: Short / Medium / Long | 3 / 2 / 1 | Smart Freight Centre (2024) |
-| Minimum / maximum / initial SOC | 10% / 90% / 90% | Model assumption |
-| Charging efficiency | 90% | Model assumption |
-| Depot charging power | 150 kW | Model assumption informed by Smart Freight Centre (2024) |
-| Opportunity charging power | 0 / 180 / 360 kW | Tested alternatives; PoR/SFC references |
-| Opportunity charger availability | All eligible dwell events | Model assumption |
-| Final return | Duty ends; no additional terminal dwell | Model assumption |
-| Next departure | 24 hours after duty start | Model assumption |
 
 **Execution order within the notebook**
 
