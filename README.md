@@ -115,15 +115,15 @@ The notebook contains the following sections, which are executed sequentially:
 
 European Comission. (2026). Heavy-duty vehicles: Council adopts targeted flexibility for manufacturers to comply with CO2 targets https://www.consilium.europa.eu/en/press/press-releases/2026/03/30/heavy-duty-vehicles-council-adopts-targeted-flexibility-for-manufacturers-to-comply-with-co2-targets/ 
 
+European Commission. (2026). Lorries, buses and coaches. https://climate.ec.europa.eu/areas-action/transport-decarbonisation/road-transport/lorries-buses-and-coaches_en
+
 European Environment Agency. (2026, June 27). Transport and mobility. https://www.eea.europa.eu/en/topics/in-depth/transport-and-mobility 
 
-Port of Rotterdam (n.d.). Charging station for electric trucks https://www.portofrotterdam.com/en/port-future/energy-transition/making-logistics-chains-more-sustainable/charging-station-for 
+Port of Rotterdam Authority. (2024, January 26). First charging station for electric trucks opened in the port of Rotterdam. https://www.portofrotterdam.com/en/news-and-press-releases/first-charging-station-for-electric-trucks-opened-in-the-port-of-rotterdam
 
 Smart Freight Centre (2024). Preliminary assessment of e-truck operational and economic viability: Drayage operations from and to the Port of Rotterdam https://smartfreightcentre.org/news/13311296 
 
 Volvo Trucks. (2021, November 29). How a good charging strategy can extend an electric truck’s range. VOLVO Group. https://www.volvotrucks.com/en-en/news-stories/insights/articles/2021/nov/How-a-good-charging-strategy-can-extend-an-electric-trucks-range.html 
 
-European Commission. (2026). Lorries, buses and coaches. https://climate.ec.europa.eu/areas-action/transport-decarbonisation/road-transport/lorries-buses-and-coaches_en?utm_source=chatgpt.com 
 
-Port of Rotterdam Authority. (2024, January 26). First charging station for electric trucks opened in the port of Rotterdam. https://www.portofrotterdam.com/en/news-and-press-releases/first-charging-station-for-electric-trucks-opened-in-the-port-of-rotterdam?utm_source=chatgpt.com
 
