@@ -99,6 +99,8 @@ The notebook contains the following sections, which are executed sequentially:
 7. **Baseline visualizations:** export feasibility matrices, battery SOC trajectories, and minimum SOC bar chart.
 8. **Consumption sensitivity:** vary consumption rates, rerun scenarios, and plot minimum SOC.
 9. **Dwell-time sensitivity:** vary destination and port-terminal dwell durations separately, rerun scenarios, and plot minimum SOC.
+10. **Peak-hour arrival sensitivity (DEXTER):** integrate empirical hourly flow profiles from the NDW DEXTER dataset to test operational feasibility under dynamic peak-hour congestion and arrival clustering.
+11. **Grid impact & terminal electricity demand:** evaluate peak power draw across multi-truck arrival scenarios to model hourly grid load and localized charging infrastructure constraints at port terminals.
 
 # 5. Authors and contributions
 
