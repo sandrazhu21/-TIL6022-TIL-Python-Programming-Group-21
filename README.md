@@ -34,14 +34,19 @@ repository-root/
 ├── README.md
 ├── Final_code(1).ipynb
 └── report_outputs/                   # generated when the notebook runs
-    ├── feasibility_results.csv
-    ├── duty_feasibility_matrix.png
-    ├── repeatability_matrix.png
-    ├── trajectories.png
-    ├── min_soc_bar.png
     ├── consumption_sensitivity_soc.png
     ├── destination_dwell_sensitivity_soc.png
-    └── port_terminal_dwell_sensitivity_soc.png
+    ├── duty_feasibility_matrix.png
+    ├── feasibility_results.csv
+    ├── matrix.png
+    ├── min_soc_bar.png
+    ├── port_terminal_dwell_sensitivity_soc.png
+    ├── port_terminal_extreme_scenario_hourly_term_grid_electricity.png
+    ├── port_terminal_extreme_scenario_hourly_visit.png
+    ├── repeatability_matrix.png
+    ├── speed_intensity_profile.png
+    ├── traffic_sensitivity_comparison.png
+    ├── trajectories.png
 ```
 # 3. Data Sources
 
