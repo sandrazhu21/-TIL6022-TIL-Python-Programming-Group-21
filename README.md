@@ -1,62 +1,71 @@
-# TIL6022 - TIL Python Programming Project Group 21
+# Electrification of Road Freight Transport in the Port of Rotterdam: Assessment of Charging Feasibility
 
-Members: Andrea De Felice, Magdalini Karataraki, Stella Nestori, Fernando Quiros, Yiying Sandra Zhu Zhou
+**Date**: November 2026
+**Course:** TIL6022 - TIL Python Programming
+**Group** Group 21
+**Repository link**: https://github.com/sandrazhu21/-TIL6022-TIL-Python-Programming-Group-21
 
-# Research Objective
+# Overview
 
-The objective of this project is to determine which representative truck duties serving the Port of Rotterdam can be completed with depot charging alone and which require additional opportunity charging during scheduled dwell periods. A common set of vehicle specifications is applied to the three representative operational profiles, short, medium, and long-distance to examine how differences in travel distance, number of round trips, and charging opportunities affect feasibility. 
+This project examines the feasibility of electrifying representative road freight operations serving the Port of Rotterdam (PoR) hinterland. It assess whether electric trucks operating over short, medium, and long-distance duties can meet their daily energy requirements through overnight depot charging alone, or whether additional opportunity charging at terminals during operational dwell times is needed.
 
-The analysis considers two requirements. The first is duty feasibility: whether the truck can complete its scheduled driving and dwell events without its battery falling below the minimum state of charge. The second is repeatable daily feasibility: whether the truck can also restore its initial battery level before the next day’s departure. We compare depot charging alone with two configurations that additionally allow opportunity charging at 180 kW and 360 kW. 
-
-# Reseach Questions
+Using Python-based analysis, the project compares the energy required by different truck duties with the energy available from the selected battery and charging configurations. Sensitivity analysis explores how the results change with key assumptions, including battery capacity, energy consumption, travel distance, and terminal dwell time. The resulting calculations and visualizations are intended to inform charging infrastructure planning for freight operations.
 
 **Main Research Question**
 
-For representative short-, medium-, and long-distance truck duties serving the Port of Rotterdam, which can be completed with overnight depot charging alone, and which require additional opportunity charging during scheduled dwell periods at origin and destination? 
-
-To answer the main research question, the following sub questions are addressed: 
+For representative short-, medium-, and long-distance truck duties serving the Port of Rotterdam, which can be completed with overnight depot charging alone, and which require additional opportunity charging during scheduled dwell periods at origin and destination?  
 
 **Sub questions**
 
-What are the daily driving energy requirements of the representative short-, medium-, and long-distance truck duties? 
+    1. What are the daily driving energy requirements of the representative short-, medium-, and long-distance truck duties? 
 
-Which combinations of operating profile and charging configuration allow the truck to complete its daily duty without falling below the minimum state of charge? 
+    2. Which combinations of operating profile and charging configuration allow the truck to complete its daily duty without falling below the minimum state of charge? 
 
-For the configurations that allow completion of the daily duty, is the remaining time before the next departure sufficient to restore the battery to its initial state of charge using depot charging? 
+    3. For the configurations that allow completion of the daily duty, is the remaining time before the next departure sufficient to restore the battery to its initial state of charge using depot charging? 
 
-How sensitive is duty feasibility to changes in energy consumption, destination dwell time, and intermediate port-terminal dwell time?
+    4. How sensitive is duty feasibility to changes in energy consumption, destination dwell time, and intermediate port-terminal dwell time?
 
-# Data Pipeline
+# Repository Content
 
-To determine which truck duties can be completed with overnight depot charging alone and which require opportunity charging, we developed a deterministic, event-based simulation of one working day for representative short, medium, and long-haul electric trucks serving the Port of Rotterdam (PoR). The model tracks the truck's battery through a chronological sequence of driving and dwell events, checking after each event whether the minimum State of Charge (SOC) requirement is respected. It subsequently tests whether the vehicle can recover its energy overnight at the depot before the next duty. By evaluating the three operational profiles in correlation with three alternative charging configurations, the framework establishes nine baseline scenarios to compare different route requirements and charging strategies. 
+The repository contains the input data, analysis notebook(s), and project figures.
 
-The simulation workflow is initialized by gathering preliminary electric truck operational values from the Smart Freight Centre (2024), defining a nominal battery capacity of 540 kWh, an energy consumption rate of 1.7 kWh/km, and a charging efficiency of 90%. Operational profile parameters establish route distances and trips per day across Short (30 km one-way, 3 trips), Medium (92.5 km one-way, 2 trips), and Long (187.5 km one-way, 1 trip) profiles. The profiles are set as the mean between the distances presented in the report (for short:0-60km, medium: 60-125km, and long:125-250km respectively). 
+repository-root/
+├── README.md
+├── Final_code.ipynb
+└── report_outputs/                   # generated when the notebook runs
+    ├── feasibility_results.csv
+    ├── duty_feasibility_matrix.png
+    ├── repeatability_matrix.png
+    ├── trajectories.png
+    ├── min_soc_bar.png
+    ├── consumption_sensitivity_soc.png
+    ├── destination_dwell_sensitivity_soc.png
+    └── port_terminal_dwell_sensitivity_soc.png
 
-Charging configurations set depot charging power to 150 kW (SFC, 2024) alongside opportunity charging alternatives of 180, and 360 kW based on the available chargers at the selected location of Waalhaven facility (PoR, n.d.). Through Python classes representing electric trucks, operational profiles, and charging options, the model formats input parameters into structured time-step event lists encompassing outbound drives, destination dwells, return drives, and port-terminal dwells. 
+| File or Folder | Content |
+|---|---:|
+| README.md | Project overview and reproduction instructions |
+| Final_code.ipynb | Main Python analysis, calculations, sensitivity test, and visualizations |
+|   | Export of the final Jupyter notebook |
+| report_outputs  |  |
+| Data Final  |  |
 
-During simulation execution, energy consumption is tracked as distance multiplied by consumption during driving legs, while battery headroom and charging power limits dictate energy intake during eligible dwell periods based on the following mathematical relations: 
+# Data Sources
 
-battery headroom=maximum stored energy−current stored energy 
+The analysis uses representative truck operational profiles and parameters related to vehicle energy use and charging.
 
-actual grid energy=min (power * dwell hours, headroom/ efficiency) 
+# Reproduction Guide
 
-battery energy received=actual grid energy* efficiency 
+**4.1 Requirements**
 
-The feasibility evaluation assesses whether duties maintain SOC above the 10% safety floor and whether sufficient off-duty hours remain for a full recharge to the upper operational limit (90% absolute SOC / 100% of the usable window) within a strict 24-hour window. 
-
-Executing the simulation under the baseline parameter set yields distinct feasibility profiles for each haul type. Short-haul duties consume 306 kWh of driving energy, remaining well within the 432 kWh usable battery window. Depot-only operation completes the shift ending at 33.3% SOC and requires approximately 2.27 hours of depot recharging, fitting comfortably within the 17.25-hour off-duty window, rendering opportunity charging unnecessary.  
-
-Conversely, medium-haul duties require 629 kWh; under a depot-only setup, the first SOC violation occurs on the second outbound drive. However, with 180 kW opportunity charging available across three dwell periods, the battery receives 364.5 kWh, maintaining a minimum operational SOC of approximately 41.0%.  
-
-Lastly, long-haul duties require 637.5 kWh, where a single 45-minute dwell supplied at 180 kW yields 121.5 kWh—insufficient to preserve the safety reserve on the return leg. Scaling opportunity charging to 360 kW supplies 243 kWh during the dwell, securing a minimum SOC of approximately 16.9% and enabling a full depot recharge in about 2.92 hours within a 17-hour off-duty window. 
-
-Battery capacity bounds energy uptake; for instance, the short route accepts a cumulative maximum of only 255 kWh of opportunity energy across all five dwells regardless of whether 180 kW or 360 kW chargers are installed, as additional charger power yields no further energy gains once the 90% SOC ceiling is reached. While larger batteries, lower consumption rates, and higher charger power expand technical feasibility, total daily energy balance alone does not guarantee success, because certain configurations fail on intermediate driving legs before a later opportunity charger can be reached. 
-
-These scenario results reflect deterministic outcomes under stated assumptions rather than empirical service-performance claims. Charging power, energy consumption per kilometer, and vehicle payloads are treated as constant and independent of external factors such as weather, topography, or traffic speeds. Furthermore, opportunity chargers are assumed to be continuously available at every destination and port-terminal dwell without queuing delays, detours, or extra stopping overhead, with all vehicles initiating their shifts at 90% SOC from a centralized depot at the Port of Rotterdam on a strict, repeatable 24-hour cycle.
+To reproduce the analysis, the following are required:
+- Python 3.12
+- Intalled Python packages:
+    - numpy
+    - pandas
+    - 
 
 # Data Used
-
-Starting with the data collection phase, a preliminary assessment of electric truck operations serving the Port of Rotterdam was conducted and some representative values have been collected from Smart Freight Centre (2024) to have a realistic set of numbers to define the simulated trucks and charging configurations. They act as the baseline values for the model. Additional assumptions were established to define the operating schedules, battery limits, and charging conditions within the scope of the model.
 
 | Parameter | Base value | Basis |
 |---|---:|---|
