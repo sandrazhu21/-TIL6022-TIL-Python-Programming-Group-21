@@ -107,8 +107,7 @@ The short-distance duty requires less energy than 432 kWh of usable battery ener
 
 *Feasible configurations*
 
- 
-
+![Matrix](report_outputs/Figure 01.png)
 
 Figure 01. En-route feasibility by operational profile and charging modality 
 
