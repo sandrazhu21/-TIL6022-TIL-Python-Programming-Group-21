@@ -26,12 +26,6 @@ For the configurations that allow completion of the daily duty, is the remaining
 
 How sensitive is duty feasibility to changes in energy consumption, destination dwell time, and intermediate port-terminal dwell time?
 
-*Geographical and temporal scale*
-
-The geographical scope of this study is limited to representative hinterland truck operations serving the PoR. The PoR is considered the common starting and returning point for the simulated truck duties, while different destinations represent varying transport distances from the port. The operational profiles are divided into three distance categories, which represent selected operating scenarios and are not intended to capture the full diversity of truck movements in the port area, which is outside the scope of this project. 
-
-The temporal scope covers one simulated working day, with the same operational duty assumed to repeat every 24 hours.
-
 # Methodology
 
 **Data Analysis Pipeline**
