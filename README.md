@@ -47,14 +47,15 @@ repository-root/
     ├── speed_intensity_profile.png
     ├── traffic_sensitivity_comparison.png
     ├── trajectories.png
+    ├── port_terminal_extreme_scenario_hourly_visit.png.png
+    ├── port_terminal_extreme_scenario_hourly_term_grid_electricity.png
 ```
 # 3. Data Sources and Scenario Assumptions
 
 
 The analysis uses representative truck operational profiles and parameters related to vehicle energy use and charging. NDW DEXTER Traffic & Flow Data: Historical and empirical traffic characteristics (including traffic volumes, flow profiles, and speed variability) were retrieved via the Nationaal Dataportaal Wegverkeer (NDW) DEXTER portal. This dataset provides high-resolution monitoring data collected from road sensors across the Dutch road network, which was utilized to simulate realistic arrival clustering and traffic flow dynamics for the port-drayage operations serving the Port of Rotterdam.
-=======
-**Data Sources**
-The supplied notebook does not import input data files or query an external API. Its input data are scenario parameters defined directly in Python.
+
+
 
 
 # 4. Reproduction Guide
