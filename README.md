@@ -54,7 +54,7 @@ Battery capacity bounds energy uptake; for instance, the short route accepts a c
 
 These scenario results reflect deterministic outcomes under stated assumptions rather than empirical service-performance claims. Charging power, energy consumption per kilometer, and vehicle payloads are treated as constant and independent of external factors such as weather, topography, or traffic speeds. Furthermore, opportunity chargers are assumed to be continuously available at every destination and port-terminal dwell without queuing delays, detours, or extra stopping overhead, with all vehicles initiating their shifts at 90% SOC from a centralized depot at the Port of Rotterdam on a strict, repeatable 24-hour cycle.
 
-**Data Used**
+# Data Used
 
 Starting with the data collection phase, a preliminary assessment of electric truck operations serving the Port of Rotterdam was conducted and some representative values have been collected from Smart Freight Centre (2024) to have a realistic set of numbers to define the simulated trucks and charging configurations. They act as the baseline values for the model. Additional assumptions were established to define the operating schedules, battery limits, and charging conditions within the scope of the model.
 
