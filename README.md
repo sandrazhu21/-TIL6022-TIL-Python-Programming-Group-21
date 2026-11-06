@@ -45,7 +45,7 @@ repository-root/
 ```
 # 3. Data Sources
 
-The analysis uses representative truck operational profiles and parameters related to vehicle energy use and charging.
+The analysis uses representative truck operational profiles and parameters related to vehicle energy use and charging. NDW DEXTER Traffic & Flow Data: Historical and empirical traffic characteristics (including traffic volumes, flow profiles, and speed variability) were retrieved via the Nationaal Dataportaal Wegverkeer (NDW) DEXTER portal. This dataset provides high-resolution monitoring data collected from road sensors across the Dutch road network, which was utilized to simulate realistic arrival clustering and traffic flow dynamics for the port-drayage operations serving the Port of Rotterdam.
 
 # 4. Reproduction Guide
 
@@ -114,9 +114,9 @@ The notebook contains the following sections, which are executed sequentially:
 | Group member | Contribution |
 |---|---|
 | Andrea de Felice | Drafted initial project context, objective and research questions and contributed to Python code for the Simulation and Modelling part  |
-| Fernando Quiros | Data Analysis, wrote Results, Conclusions, Discussion, and Read me file.  |
-| Magdalini Karataraki | Reviewed Final report and Read me, contributed to Python code for review, visualization and data analysis for worst case scenario as sensitivity  |
-| Stella Nestori | Conceptualization and Drafted initial project context and research questions  |
+| Fernando Quiros |  Wrote Results, Conclusions, Discussion, and Read me file.  |
+| Magdalini Karataraki | Wrote and reviewed Final report and Read me, contributed to Python code for review, visualization and data analysis for worst case scenario as sensitivity  |
+| Stella Nestori | Drafted initial project context and research questions  |
 | Sandra Zhu Zhou  | Wrote and reviewed Final report and Read me, contributed to Python code for review, visualization and sensitivity analysis |
 
 # 6. References
