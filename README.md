@@ -2,7 +2,7 @@
 
 **Date**: November 2026
 **Course:** TIL6022 - TIL Python Programming
-**Group** Group 21
+**Group:** Group 21
 **Repository link**: https://github.com/sandrazhu21/-TIL6022-TIL-Python-Programming-Group-21
 
 # 1. Overview
