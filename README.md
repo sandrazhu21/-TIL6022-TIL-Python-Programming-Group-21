@@ -2,19 +2,25 @@
 
 Members: Andrea De Felice, Magdalini Karataraki, Stella Nestori, Fernando Quiros, Yiying Sandra Zhu Zhou
 
-Student numbers: 6591973, 6794629, 6811523, 5237076, 6615201
-
 # Introduction
 
 **Context & Relevance**
 
 The transition towards more sustainable transport systems is an important part of addressing climate change and reducing greenhouse gas emissions. In the European Union, heavy-duty vehicles, including trucks, buses and coaches, are responsible for more than 25% of road transport greenhouse gas emissions, despite representing only about 2% of vehicles on EU roads (European Commission, 2026). Furthermore, transport activity is expected to increase, therefore reducing the environmental impact of transport has become an important challenge for the transport sector (European Environment Agency, 2026).  
 
-One potential approach to reducing these emissions is the electrification of heavy-duty vehicles. Replacing conventional diesel trucks with electric alternatives can contribute to the decarbonization of freight transport. However, the transition involves more than simply replacing one type of vehicle with another. The integration of electric trucks into existing transport oeprations also requires suitable charging infrastructure to ensure that vehicles have sufficient energy to perform their scheduled duties. The availability, location, and charging capacity of infrastructure therefore play an important role in determining whether electric trucks can be practically intergated into daily logistics operations.  
+One potential approach to reducing these emissions is the electrification of heavy-duty vehicles. Replacing conventional diesel trucks with electric alternatives can contribute to the decarbonization of freight transport. However, the transition involves more than simply replacing one type of vehicle with another. The integration of electric trucks into existing transport operations also requires suitable charging infrastructure to ensure that vehicles have sufficient energy to perform their scheduled duties. The availability, location, and charging capacity of infrastructure therefore play an important role in determining whether electric trucks can be practically integrated into daily logistics operations.  
 
-In particular, charging opportunities need to align with the operational schedules of freight transport. Trucks may be able to recharge between working days, but this may not always provide sufficient energy for more demanding daily oeprations. Charging during scheduled stops, such as loading and unloding periods, could offer an additional opportunity to replenish the battery. Consequently, understanding the relationship between transport schedules and charging opportunities is important when assessing the feasibility of electric trucks in existing logistics networks.  
+In particular, charging opportunities need to align with the operational schedules of freight transport. Trucks may be able to recharge between working days, but this may not always provide sufficient energy for more demanding daily operations. Charging during scheduled stops, such as loading and unloading periods, could offer an additional opportunity to replenish the battery. The feasibility of this depends on how well charging opportunities fit within the existing transport schedules. 
 
-These challenges are particularly relevant in port environments, where freight transport connects maritime activities with inland networks. In ports, there are substantial truck movements between terminals, distribution centers and other destinations, which makes electrification of trucks operating in and around ports an important consideration. In this context, the Port of Rotterdam (PoR) can serve as a relevant case for examining the potential and challenges of freight electrification.  As a major logistics hub, it accommodates different types of hinterland truck operations that vary in distance, frequency, and daily schedules. According to Smart Freight Centre (2024), approximately 55% of the port's hinterland container transport is carried by trucks, resulting in around 10,000 truck movements to and from the port each day. These movements involve a variety of transport distances, with some trucks performing multiple relatively short trips and others undertaking longer journeys. The report also indicates that approximately 74% of truck trips to and from the port fall within a distance of 250km. This illustrates the diversity of truck operations in the port area and suggests that different operational profiles may have different energy requirements and charging needs.  
+These considerations are particularly relevant in port environments, where freight transport connects maritime activities with inland networks. In ports, there are substantial truck movements between terminals, distribution centers and other destinations, which makes electrification of trucks operating in and around ports an important consideration. In this context, the Port of Rotterdam (PoR) can serve as a relevant case for examining this.  As a major logistics hub, it accommodates different types of hinterland truck operations that vary in distance, frequency, and daily schedules. According to Smart Freight Centre (2024), approximately 55% of the port's hinterland container transport is carried by trucks, resulting in around 10,000 truck movements to and from the port each day. These movements involve a variety of transport distances, with some trucks performing multiple relatively short trips and others undertaking longer journeys. The report also indicates that approximately 74% of truck trips to and from the port fall within 250km. This illustrates the diversity of truck operations in the port area and suggests that different operational profiles may have different energy requirements and charging needs.  
+
+The feasibility of electrifying these operations depends on the relationship between vehicle energy consumption, battery capacity, and the availability of charging opportunities. For trucks that return to their depot at the end of the working day, depot charging can provide a relatively straightforward solution, as vehicles can recharge during overnight parking. However, for trucks undertaking longer distances or multiple trips within a single working day, overnight charging may not always provide sufficient energy to complete the required activities. In such cases, additional charging during the working day may be necessary (Volvo Trucks, 2021). 
+
+An alternative is opportunity charging, in which trucks recharge during periods when they are already stationary as part of their normal operation. For port-related freight transport, these opportunities may occur at loading and unloading locations, distribution centers or truck parking facilities. By using existing dwell periods for charging, vehicles may replenish part of their battery without requiring additional stops or substantially changing their operational schedules. However, the amount of energy that can be transferred depends on the duration of the stop, the available charging power, and the vehicle's charging characteristics. Consequently, the practical contribution of opportunity charging needs to be assessed in relation to actual vehicle schedules rather than considering charging power or vehicle range in isolation.  
+
+The development of charging infrastructure in the PoR demonstrates the growing relevance of these charging solutions. For example, in January 2024, a charging station opened at Waalhaven where eight electric trucks can charge simultaneously (Port of Rotterdam Authority, 2024). However, the availability of charging infrastructure does not establish whether electric trucks can meet the energy demands of different transport operations. It is therefore important to examine how different charging strategies perform under varying operations conditions.  
+
+This report investigates the feasibility of electrifying representative truck operations in the PoR by comparing short-, medium-, and long-distance transport profiles. It examines whether these operations can be supported by depot charging alone or whether additional opportunity charging is required during the working day. In addition, analysis considers different opportunity charging power levels to assess their contribution to meeting daily energy requirements. By comparing these scenarios, the report aims to identify the operational conditions under which electric trucks can complete their daily duties and sustain repeatable operations.
 
 # Research Objective
 
@@ -22,13 +28,9 @@ The objective of this project is to determine which representative truck duties 
 
 The analysis considers two requirements. The first is duty feasibility: whether the truck can complete its scheduled driving and dwell events without its battery falling below the minimum state of charge. The second is repeatable daily feasibility: whether the truck can also restore its initial battery level before the next day’s departure. We compare depot charging alone with two configurations that additionally allow opportunity charging at 180 kW and 360 kW. 
 
-The analysis also examines how changes in energy consumption, destination dwell time, and port-terminal dwell time affect the results. This allows the sensitivity of the simulated configurations to selected operating assumptions to be assessed. The aim is to identify the conditions under which each charging configuration can support individual truck duties and provide a starting point for more detailed charging infrastructure studies. 
-
-**Research questions**
-
-*Main research question*
-
 For representative short-, medium-, and long-distance truck duties serving the Port of Rotterdam, which can be completed with overnight depot charging alone, and which require additional opportunity charging during scheduled dwell periods at origin and destination? 
+
+To answer the main research question, the following sub questions are addressed: 
 
 *Sub questions*
 
@@ -42,11 +44,41 @@ How sensitive is duty feasibility to changes in energy consumption, destination 
 
 **Geographical and temporal scale**
 
-This project focuses on road freight logistics operations connecting the PoR. These operations are represented by short-, medium-, and long-distance duties, with different trip distances and numbers of round trips per day. The PoR is assumed to be the origin and final return point for all duties, with destinations represented by their distance from the port rather than specific geographical locations. The depot is also assumed to be located at the port. 
+The geographical scope of this study is limited to representative hinterland truck operations serving the PoR. The PoR is considered the common starting and returning point for the simulated truck duties, while different destinations represent varying transport distances from the port. The operational profiles are divided into three distance categories, which represent selected operating scenarios and are not intended to capture the full diversity of truck movements in the port area, which is outside the scope of this project. 
 
-The model considers a 24-hour cycle, starting at 09:00 with the battery at 90% state of charge. This cycle includes the daily transport duty, consisting of driving and loading or unloading periods, followed by the time available for depot charging. The next departure is scheduled for 09:00 the following day. The analysis therefore checks both whether the truck can complete its duty and whether it can restore its initial battery level before the next departure. 
+The temporal scope covers one simulated working day, with the same operational duty assumed to repeat every 24 hours.
 
-# Data Used
+# Methodology
+
+**Data Analysis Pipeline**
+
+To determine which truck duties can be completed with overnight depot charging alone and which require opportunity charging, we developed a deterministic, event-based simulation of one working day for representative short, medium, and long-haul electric trucks serving the Port of Rotterdam (PoR). The model tracks the truck's battery through a chronological sequence of driving and dwell events, checking after each event whether the minimum State of Charge (SOC) requirement is respected. It subsequently tests whether the vehicle can recover its energy overnight at the depot before the next duty. By evaluating the three operational profiles in correlation with three alternative charging configurations, the framework establishes nine baseline scenarios to compare different route requirements and charging strategies. 
+
+The simulation workflow is initialized by gathering preliminary electric truck operational values from the Smart Freight Centre (2024), defining a nominal battery capacity of 540 kWh, an energy consumption rate of 1.7 kWh/km, and a charging efficiency of 90%. Operational profile parameters establish route distances and trips per day across Short (30 km one-way, 3 trips), Medium (92.5 km one-way, 2 trips), and Long (187.5 km one-way, 1 trip) profiles. The profiles are set as the mean between the distances presented in the report (for short:0-60km, medium: 60-125km, and long:125-250km respectively). 
+
+Charging configurations set depot charging power to 150 kW (SFC, 2024) alongside opportunity charging alternatives of 180, and 360 kW based on the available chargers at the selected location of Waalhaven facility (PoR, n.d.). Through Python classes representing electric trucks, operational profiles, and charging options, the model formats input parameters into structured time-step event lists encompassing outbound drives, destination dwells, return drives, and port-terminal dwells. 
+
+During simulation execution, energy consumption is tracked as distance multiplied by consumption during driving legs, while battery headroom and charging power limits dictate energy intake during eligible dwell periods based on the following mathematical relations: 
+
+battery headroom=maximum stored energy−current stored energy 
+
+actual grid energy=min (power * dwell hours, headroom/ efficiency) 
+
+battery energy received=actual grid energy* efficiency 
+
+The feasibility evaluation assesses whether duties maintain SOC above the 10% safety floor and whether sufficient off-duty hours remain for a full recharge to the upper operational limit (90% absolute SOC / 100% of the usable window) within a strict 24-hour window. 
+
+Executing the simulation under the baseline parameter set yields distinct feasibility profiles for each haul type. Short-haul duties consume 306 kWh of driving energy, remaining well within the 432 kWh usable battery window. Depot-only operation completes the shift ending at 33.3% SOC and requires approximately 2.27 hours of depot recharging, fitting comfortably within the 17.25-hour off-duty window, rendering opportunity charging unnecessary.  
+
+Conversely, medium-haul duties require 629 kWh; under a depot-only setup, the first SOC violation occurs on the second outbound drive. However, with 180 kW opportunity charging available across three dwell periods, the battery receives 364.5 kWh, maintaining a minimum operational SOC of approximately 41.0%.  
+
+Lastly, long-haul duties require 637.5 kWh, where a single 45-minute dwell supplied at 180 kW yields 121.5 kWh—insufficient to preserve the safety reserve on the return leg. Scaling opportunity charging to 360 kW supplies 243 kWh during the dwell, securing a minimum SOC of approximately 16.9% and enabling a full depot recharge in about 2.92 hours within a 17-hour off-duty window. 
+
+Battery capacity bounds energy uptake; for instance, the short route accepts a cumulative maximum of only 255 kWh of opportunity energy across all five dwells regardless of whether 180 kW or 360 kW chargers are installed, as additional charger power yields no further energy gains once the 90% SOC ceiling is reached. While larger batteries, lower consumption rates, and higher charger power expand technical feasibility, total daily energy balance alone does not guarantee success, because certain configurations fail on intermediate driving legs before a later opportunity charger can be reached. 
+
+These scenario results reflect deterministic outcomes under stated assumptions rather than empirical service-performance claims. Charging power, energy consumption per kilometer, and vehicle payloads are treated as constant and independent of external factors such as weather, topography, or traffic speeds. Furthermore, opportunity chargers are assumed to be continuously available at every destination and port-terminal dwell without queuing delays, detours, or extra stopping overhead, with all vehicles initiating their shifts at 90% SOC from a centralized depot at the Port of Rotterdam on a strict, repeatable 24-hour cycle.
+
+**Data Used**
 
 Starting with the data collection phase, a preliminary assessment of electric truck operations serving the Port of Rotterdam was conducted and some representative values have been collected from Smart Freight Centre (2024) to have a realistic set of numbers to define the simulated trucks and charging configurations. They act as the baseline values for the model. Additional assumptions were established to define the operating schedules, battery limits, and charging conditions within the scope of the model.
 
@@ -67,35 +99,6 @@ Starting with the data collection phase, a preliminary assessment of electric tr
 | Opportunity charger availability | All eligible dwell events | Model assumption |
 | Final return | Duty ends; no additional terminal dwell | Model assumption |
 | Next departure | 24 hours after duty start | Model assumption |
-
-# Data Pipeline
-
-1. Data collection 
-
-    a. truck-specific assumptions (battery capacity, electricity consumption) 
-
-    b. operational profile parameters (route distances, trips per day) 
-
-    c. charging configurations (charging power) 
-
-2. Data preparation: format all input parameters into required structures 
-
-3. Computation:  
-
-    a. Create relevant functions such as decreasing battery over trip execution, estimating time needed to complete charging etc. 
-
-    b. Create events of truck duties 
-
-    c. Process each truck profile under different scenarios defined above 
-
-4. Simulation: keeping track of the energy consumed and available 
-
-5. Evaluation: assessing feasibility and computing performance metrics 
-
-6. Visualisation: SOC trajectories, feasibility outputs, sensitivity plots 
-
-# Methodology
-
 
 # Results
 
@@ -178,14 +181,42 @@ Furthermore, the sensitivity analysis is limited to test truck specifications an
 
 # Contribution Statement
 
-*Be specific. Some of the tasks can be coding (expect everyone to do this), background research, conceptualisation, visualisation, data analysis, data modelling*
+**Author 1**: Andrea De Felice contributed to background research by drafting the initial context, objective and research question, and to python modelling and simulation.
 
-**Author 1**:
+**Author 2**: Fernando Quiros contributed to conceptualisation, data analysis and writing the Read me file.
 
-**Author 2**:
+**Author 3**: Magdalini Karataraki contributed to reviewing the final report and read me file, visualisation and data analysis.
 
-**Author 3**:
+**Author 4**: Stella Nestori contributed to background research by drafting the initial project context, objective and research questions.
 
-**Author 4**:
+**Author 5**: Sandra Zhu Zhou contributed to preparing the final report and Read me file, and data modelling, visualization and sensitivity analysis.
 
-**Author 5**:
+# References
+European Comission. (2026). Heavy-duty vehicles: Council adopts targeted flexibility for manufacturers to comply with CO2 targets (https://www.consilium.europa.eu/en/press/press-releases/2026/03/30/heavy-duty-vehicles-council-adopts-targeted-flexibility-for-manufacturers-to-comply-with-co2-targets/) 
+
+European Environment Agency. (2026, June 27). Transport and mobility. https://www.eea.europa.eu/en/topics/in-depth/transport-and-mobility 
+
+Port of Rotterdam (n.d.). Charging station for electric trucks (https://www.portofrotterdam.com/en/port-future/energy-transition/making-logistics-chains-more-sustainable/charging-station-for).  
+
+Smart Freight Centre (2024). Preliminary assessment of e-truck operational and economic viability: Drayage operations from and to the Port of Rotterdam (https://smartfreightcentre.org/news/13311296).  
+
+Volvo Trucks. (2021, November 29). How a good charging strategy can extend an electric truck’s range. VOLVO Group. https://www.volvotrucks.com/en-en/news-stories/insights/articles/2021/nov/How-a-good-charging-strategy-can-extend-an-electric-trucks-range.html 
+
+# AI Statement
+
+We acknowledge the use of AI in preparing this submission. We used it for the following purposes: Refining language (grammar, vocabulary, clarity, and consistency in the report, ...). 
+
+Andrea De Felice used ChatGPT to assist in refining language in report writing and evaluating code structure and debugging errors within the Python simulation pipeline.
+
+Fernando Quiros used ChatGPT to assist in refining language, and academic writing in the Results, Discussion, and Conclusions section. 
+
+Magdalini Karataraki used Gemini to assist with language refinement, grammar correction, and syntax checking within the report's text, as well as evaluating code structure and debugging errors within the Python simulation pipeline. 
+
+Stella Nestori used ChatGPT to assist in refining language in report writing. 
+
+Sandra Zhu Zhou used ChatGPT to assist in refining language in report writing, as well as evaluating code structure and debugging errors within the Python simulation pipeline.
+
+We confirm that we have critically reviewed and verified all AI-assisted content, that the submitted work reflects our own understanding, and that we take full responsibility for its accuracy and originality
+
+
+
