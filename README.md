@@ -119,6 +119,8 @@ European Commission. (2026). Lorries, buses and coaches. https://climate.ec.euro
 
 European Environment Agency. (2026, June 27). Transport and mobility. https://www.eea.europa.eu/en/topics/in-depth/transport-and-mobility 
 
+Port of Rotterdam. (n.d.). Charging station for electric trucks. Retrieved November 6, 2026, from https://www.portofrotterdam.com/en/port-future/energy-transition/making-logistics-chains-more-sustainable/charging-station-for 
+
 Port of Rotterdam Authority. (2024, January 26). First charging station for electric trucks opened in the port of Rotterdam. https://www.portofrotterdam.com/en/news-and-press-releases/first-charging-station-for-electric-trucks-opened-in-the-port-of-rotterdam
 
 Smart Freight Centre (2024). Preliminary assessment of e-truck operational and economic viability: Drayage operations from and to the Port of Rotterdam https://smartfreightcentre.org/news/13311296 
